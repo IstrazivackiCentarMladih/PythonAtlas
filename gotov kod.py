@@ -177,8 +177,8 @@ scale = 200
 octaves = 70  # 12
 persistence = 0.3  # 15
 lacunarity = 2.0
-seed = 65 #np.random.randint(0,100)  # 65
-seed2 = 91 #np.random.randint(0,100)  # 91
+seed = np.random.randint(0,100)  # 65
+seed2 = np.random.randint(0,100)  # 91
 print(seed, seed2)
 world = np.zeros(shape)
 for i in range(shape[0]):
@@ -206,9 +206,9 @@ for i in range(shape[0]):
 
 show_heights(world)
 show_heights(biomes)
-np.save("world.npy", world)
-np.save("biomes.npy", biomes)        
-"""
+#np.save("world.npy", world)
+#np.save("biomes.npy", biomes)        
+
 print(world)
 show_heights(world)
 show_heights(biomes)
@@ -221,4 +221,4 @@ show_map(color_world1)
 color_world2 = bionify(world, color_world1, biomes)
 show_map(color_world2)
 color_world3 = riverify(color_world2, world)
-show_map(color_world3)"""
+show_map(color_world3)
